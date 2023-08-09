@@ -2971,23 +2971,25 @@ var render = function render() {
   return _c("div", {
     staticClass: "grid grid-cols-5"
   }, [_c("div", {
-    staticClass: "relative flex col-span-1 items-center justify-between"
+    staticClass: "col-span-1 p-4 rounded-xl border-[4px] border-slate-50"
+  }, [_c("div", {
+    staticClass: "relative flex items-center justify-between overflow-hidden"
   }, [_c("div", {
     staticClass: "flex flex-col"
   }, [_c("div", {
     staticClass: "flex"
   }, [_c("div", {
-    staticClass: "text-4xl font-semibold"
-  }, [_vm._v("\n                    " + _vm._s(_vm.degree) + "\n                ")]), _vm._v(" "), _c("div", {
+    staticClass: "text-4xl font-semibold text-gray-700"
+  }, [_vm._v("\n                        " + _vm._s(_vm.degree) + "\n                    ")]), _vm._v(" "), _c("div", {
     staticClass: "text-sm text-gray-500"
-  }, [_vm._v("\n                    ºC\n                ")])]), _vm._v(" "), _c("div", {
+  }, [_vm._v("\n                        ºC\n                    ")])]), _vm._v(" "), _c("div", {
     staticClass: "text-[8px] text-gray-700"
   }, [_c("font-awesome-icon", {
     staticClass: "text-gray-400",
     attrs: {
       icon: _vm.windIcon
     }
-  }), _vm._v(" \n                " + _vm._s(_vm.windSpeed) + " km/s.\n            ")], 1)]), _vm._v(" "), _c("div", [_c("font-awesome-icon", {
+  }), _vm._v(" \n                    " + _vm._s(_vm.windSpeed) + " km/s.\n                ")], 1)]), _vm._v(" "), _c("div", [_c("font-awesome-icon", {
     staticClass: "text-5xl",
     "class": {
       "text-yellow-400": _vm.isDaytime,
@@ -2996,9 +2998,9 @@ var render = function render() {
     attrs: {
       icon: _vm.dayNightIcon
     }
-  })], 1), _vm._v(" "), !_vm.currLocation || _vm.degree === "0" || _vm.windSpeed === "0" ? _c("div", {
+  })], 1), _vm._v(" "), !_vm.currLocation || _vm.degree == "0" || _vm.windSpeed === "0" ? _c("div", {
     staticClass: "absolute flex justify-center items-center h-full w-full text-xs bg-white bg-opacity-80"
-  }, [_vm._v("\n            " + _vm._s(_vm.loadingMessage) + "\n        ")]) : _vm._e()])]);
+  }, [_vm._v("\n                " + _vm._s(_vm.loadingMessage) + "\n            ")]) : _vm._e()])])]);
 };
 var staticRenderFns = [];
 render._withStripped = true;

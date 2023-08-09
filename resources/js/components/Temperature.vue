@@ -1,32 +1,34 @@
 <template>
     <div class="grid grid-cols-5">
-        <div class="relative flex col-span-1 items-center justify-between">
-            <div class="flex flex-col">
-                <div class="flex">
-                    <div class="text-4xl font-semibold">
-                        {{ degree }}
+        <div class="col-span-1 p-4 rounded-xl border-[4px] border-slate-50">
+            <div class="relative flex items-center justify-between overflow-hidden">
+                <div class="flex flex-col">
+                    <div class="flex">
+                        <div class="text-4xl font-semibold text-gray-700">
+                            {{ degree }}
+                        </div>
+                        <div class="text-sm text-gray-500">
+                            ºC
+                        </div>
                     </div>
-                    <div class="text-sm text-gray-500">
-                        ºC
+                    <div class="text-[8px] text-gray-700">
+                        <font-awesome-icon class="text-gray-400" :icon="windIcon" /> 
+                        {{ windSpeed }} km/s.
                     </div>
                 </div>
-                <div class="text-[8px] text-gray-700">
-                    <font-awesome-icon class="text-gray-400" :icon="windIcon" /> 
-                    {{ windSpeed }} km/s.
+                <div>
+                    <font-awesome-icon
+                        class="text-5xl"
+                        :class="{ 'text-yellow-400': isDaytime, 'text-purple-400': !isDaytime }"
+                        :icon="dayNightIcon"
+                    />
                 </div>
-            </div>
-            <div>
-                <font-awesome-icon
-                    class="text-5xl"
-                    :class="{ 'text-yellow-400': isDaytime, 'text-purple-400': !isDaytime }"
-                    :icon="dayNightIcon"
-                />
-            </div>
-            <div
-                v-if="(!currLocation || degree === '0' || windSpeed === '0')"
-                class="absolute flex justify-center items-center h-full w-full text-xs bg-white bg-opacity-80"
-            >
-                {{ loadingMessage }}
+                <div
+                    v-if="(!currLocation || degree == '0' || windSpeed === '0')"
+                    class="absolute flex justify-center items-center h-full w-full text-xs bg-white bg-opacity-80"
+                >
+                    {{ loadingMessage }}
+                </div>
             </div>
         </div>
     </div>
