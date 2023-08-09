@@ -2971,7 +2971,7 @@ var render = function render() {
   return _c("div", {
     staticClass: "grid grid-cols-5"
   }, [_c("div", {
-    staticClass: "col-span-1 p-4 rounded-xl border-[4px] border-slate-50"
+    staticClass: "col-span-1 p-4 rounded-xl shadow"
   }, [_c("div", {
     staticClass: "relative flex items-center justify-between overflow-hidden"
   }, [_c("div", {

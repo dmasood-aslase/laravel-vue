@@ -1,6 +1,6 @@
 <template>
     <div class="grid grid-cols-5">
-        <div class="col-span-1 p-4 rounded-xl border-[4px] border-slate-50">
+        <div class="col-span-1 p-4 rounded-xl shadow">
             <div class="relative flex items-center justify-between overflow-hidden">
                 <div class="flex flex-col">
                     <div class="flex">
