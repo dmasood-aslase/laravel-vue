@@ -1,10 +1,15 @@
 <template>
   <div class="container">
-    <h1>Page Home</h1>
+    <Temperature />
   </div>
 </template>
 
 <script>
-export default {};
+import Temperature from '../components/Temperature.vue';
+export default {
+  components: {
+    Temperature,
+  },
+};
 </script>
 
