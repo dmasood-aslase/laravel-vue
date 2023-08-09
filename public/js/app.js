@@ -2145,7 +2145,9 @@ __webpack_require__.r(__webpack_exports__);
 var render = function render() {
   var _vm = this,
     _c = _vm._self._c;
-  return _c("nav", [_vm._v("\n  Testing\n")]);
+  return _c("nav", {
+    staticClass: "container my-4 px-4"
+  }, [_vm._v("\n  Testing\n")]);
 };
 var staticRenderFns = [];
 render._withStripped = true;
